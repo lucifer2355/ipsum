@@ -42,7 +42,7 @@ function FilterSidebar({ onSortChange, updateURL }: FilterSidebarProps) {
         } transition-transform duration-300 ease-in-out lg:static lg:translate-x-0 lg:h-auto`}
       >
         <Filters
-          onSortChange={onSortChange}
+          onSortChange={(value: ProductSortBy) => onSortChange(value)}
           onUpdateURL={(filters: any) => updateURL(filters)}
         />
 

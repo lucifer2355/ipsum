@@ -82,7 +82,9 @@ function Filters({ onSortChange, onUpdateURL }: FiltersPops) {
       </div>
 
       <div className='sm:hidden'>
-        <SortBy onSortChange={onSortChange} />
+        <SortBy
+          onSortChange={(value: ProductSortBy) => onSortChange?.(value)}
+        />
       </div>
 
       {activeFilters.length > 0 && <ActiveFilters onUpdateURL={onUpdateURL} />}
