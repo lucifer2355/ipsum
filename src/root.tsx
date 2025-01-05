@@ -1,12 +1,9 @@
-import { RouterProps, BrowserRouter } from "react-router";
-import { Provider, ProviderProps } from "react-redux";
+import { BrowserRouter } from "react-router";
+import { Provider } from "react-redux";
 import App from "./components/app";
+import store from "./store";
 
-interface RootProps
-  extends Omit<RouterProps, "children">,
-    Omit<ProviderProps, "children"> {}
-
-function Root({ store }: RootProps) {
+function Root() {
   return (
     <Provider store={store}>
       <BrowserRouter>
